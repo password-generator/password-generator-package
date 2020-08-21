@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/types/types.d.ts",
   "repository": "https://github.com/password-generator/password-generator-package",
-  "homepage": "https://github.com/Mikael-R/readme-template-generator#readme",
+  "homepage": "https://github.com/password-generator/password-generator-package#readme",
   "bugs": {
     "url": "https://github.com/password-generator/password-generator-package/issues"
   },
@@ -20,6 +20,7 @@
   "license": "MIT",
   "private": false,
   "scripts": {
+    "commit": "git-cz",
     "format": "eslint src --ext ts",
     "dev": "ts-node src/index.ts",
     "dist": "rm -rf dist && babel src --extensions \".ts\" --out-dir dist --copy-files --no-comments"
@@ -37,7 +38,12 @@
     "@babel/node": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
     "@babel/preset-typescript": "^7.10.4",
+    "@commitlint/cli": "^9.1.2",
+    "@commitlint/config-conventional": "^9.1.2",
     "@types/node": "^12.7.11",
+    "commitizen": "^4.1.2",
+    "cz-conventional-changelog": "^3.2.0",
+    "husky": "^4.2.5",
     "ts-node": "^8.4.1",
     "typescript": "^3.6.3"
   }
