@@ -1,0 +1,44 @@
+{
+  "name": "password-generator-package",
+  "version": "0.0.1",
+  "description": "Package with the algorithm to generate password",
+  "main": "dist/index.js",
+  "types": "dist/types/types.d.ts",
+  "repository": "https://github.com/password-generator/password-generator-package",
+  "homepage": "https://github.com/Mikael-R/readme-template-generator#readme",
+  "bugs": {
+    "url": "https://github.com/password-generator/password-generator-package/issues"
+  },
+  "keywords": [
+    "password",
+    "package",
+    "generate",
+    "generate-password",
+    "password-generator"
+  ],
+  "author": "Mikael-R <mikarg9@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "format": "eslint src --ext ts",
+    "dev": "ts-node src/index.ts",
+    "dist": "rm -rf dist && babel src --extensions \".ts\" --out-dir dist --copy-files --no-comments"
+  },
+  "files": [
+    "tsconfig.json",
+    "dist",
+    "LICENSE",
+    "README.md"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/cli": "^7.10.4",
+    "@babel/core": "^7.10.4",
+    "@babel/node": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/node": "^12.7.11",
+    "ts-node": "^8.4.1",
+    "typescript": "^3.6.3"
+  }
+}
