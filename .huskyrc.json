@@ -1,6 +1,6 @@
 {
   "hooks": {
-    "pre-commit": "npm run dist",
+    "pre-commit": "npm run format && npm run dist",
     "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
   }
 }
