@@ -1,10 +1,16 @@
 {
-  "name": "password-generator-package",
+  "name": "@password-generator/password-generator-package",
   "version": "0.0.1",
   "description": "Package with the algorithm to generate password",
   "main": "dist/index.js",
   "types": "dist/types/types.d.ts",
-  "repository": "https://github.com/password-generator/password-generator-package",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/password-generator/password-generator-package.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
   "homepage": "https://github.com/password-generator/password-generator-package#readme",
   "bugs": {
     "url": "https://github.com/password-generator/password-generator-package/issues"
@@ -23,7 +29,7 @@
     "commit": "git-cz",
     "format": "eslint src --ext ts",
     "dev": "ts-node src/index.ts",
-    "dist": "rm -rf dist && babel src --extensions \".ts\" --out-dir dist --copy-files --no-comments"
+    "dist": "babel src --extensions \".ts\" --out-dir dist --copy-files --no-comments"
   },
   "files": [
     "tsconfig.json",
