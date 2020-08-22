@@ -51,6 +51,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
     "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
     "ts-node": "^8.4.1",
     "typescript": "^3.6.3"
   }
