@@ -10,7 +10,22 @@
     "sourceType": "module"
   },
   "plugins": ["@typescript-eslint", "eslint-plugin-import-helpers"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        "@typescript-eslint/no-unused-vars": [
+          2,
+          {
+            "args": "none"
+          }
+        ]
+      }
+    }
+  ],
   "rules": {
+    "import/extensions": "off",
+    "import/no-unresolved": "off",
     "import-helpers/order-imports": [
       "warn",
       {
@@ -21,6 +36,7 @@
           "ignoreCase": true
         }
       }
-    ]
+    ],
+    "no-unused-vars": "off"
   }
 }
