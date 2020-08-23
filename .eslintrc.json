@@ -24,19 +24,34 @@
     }
   ],
   "rules": {
-    "import/extensions": "off",
-    "import/no-unresolved": "off",
     "import-helpers/order-imports": [
-      "warn",
+      "error",
       {
         "newlinesBetween": "always",
-        "groups": ["module", "/^@shared/", ["parent", "sibling", "index"]],
+        "groups": ["module", ["parent", "sibling", "index"]],
         "alphabetize": {
           "order": "asc",
           "ignoreCase": true
         }
       }
     ],
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "import/extensions": [
+      "error",
+      {
+        "ts": "never"
+      }
+    ]
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".ts"]
+      }
+    },
+    "import/extensions": [".ts"],
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts"]
+    }
   }
 }
