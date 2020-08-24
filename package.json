@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "Package with the algorithm to generate password",
   "main": "dist/index.js",
-  "types": "dist/types/types.d.ts",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/password-generator/password-generator-package.git"
@@ -29,7 +29,7 @@
     "commit": "git-cz",
     "format": "eslint src --ext ts",
     "dev": "ts-node src/index.ts",
-    "dist": "babel src --extensions \".ts\" --out-dir dist --copy-files --no-comments"
+    "dist": "babel src --extensions \".ts\" --out-dir dist --copy-files --no-comments && tsc --emitDeclarationOnly"
   },
   "files": [
     "tsconfig.json",
