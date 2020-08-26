@@ -1,6 +1,6 @@
 {
-  "name": "@password-generator/password-generator-package",
-  "version": "1.1.0",
+  "name": "password-generator-package",
+  "version": "1.0.0",
   "description": "Package with the algorithm to generate password",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -19,7 +19,7 @@
     "generate-password",
     "password-generator"
   ],
-  "author": "password-generator <passgenerator.org@gmail.com>",
+  "author": "Mikael Rolim de Aquino <mikarg9@gmail.com>",
   "license": "MIT",
   "private": false,
   "scripts": {
