@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 12
           registry-url: 'https://registry.npmjs.org'
-          scope: '@password-generator'
+          scope: '@password_generator_org'
 
       - uses: actions/cache@v2
         with:
