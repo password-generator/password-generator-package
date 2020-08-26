@@ -1,21 +1,34 @@
-name: NPM Publish
+name: NPM-Publish
 
 on:
   push:
-    branches: [ master ]
+    branch: [ master ]
 
 jobs:
-  publish-gpr:
+  publish:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
         with:
           node-version: 12
-          registry-url: https://npm.pkg.github.com/
-          scope: '@password-generator'
-      - run: yarn
-      - run: yarn dist
-      - run: yarn publish
+          registry-url: https://registry.npmjs.org
+
+      - uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Build dist files
+        run: yarn dist
+
+      - name: Publish
+        run: yarn publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}

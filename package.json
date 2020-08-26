@@ -1,15 +1,12 @@
 {
   "name": "@password-generator/password-generator-package",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Package with the algorithm to generate password",
   "main": "dist/index.js",
-  "types": "dist/types/types.d.ts",
+  "types": "dist/index.d.ts",
   "repository": {
     "type": "git",
     "url": "https://github.com/password-generator/password-generator-package.git"
-  },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
   },
   "homepage": "https://github.com/password-generator/password-generator-package#readme",
   "bugs": {
@@ -22,14 +19,14 @@
     "generate-password",
     "password-generator"
   ],
-  "author": "Mikael-R <mikarg9@gmail.com>",
+  "author": "password-generator <passgenerator.org@gmail.com>",
   "license": "MIT",
   "private": false,
   "scripts": {
     "commit": "git-cz",
     "format": "eslint src --ext ts",
     "dev": "ts-node src/index.ts",
-    "dist": "babel src --extensions \".ts\" --out-dir dist --copy-files --no-comments"
+    "dist": "babel src --extensions \".ts\" --out-dir dist --copy-files --no-comments && tsc --emitDeclarationOnly"
   },
   "files": [
     "tsconfig.json",
@@ -58,6 +55,7 @@
     "eslint-plugin-import-helpers": "^1.1.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
+    "git-cz": "^4.7.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
     "ts-node": "^8.4.1",
