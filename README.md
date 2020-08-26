@@ -45,7 +45,7 @@ yarn add https://github.com/password-generator/password-generator-package
 
 Import and execute
 ```typescript
-import generatePassword from '@password-generator/password-generator-package';
+import generatePassword from 'password-generator-package';
 
 const password = generatePassword({
   passwordLength: 16,
@@ -84,9 +84,9 @@ console.log(password);
 
 <h2 id="features">🎇 Features</h2>
 
-- [x] create algorithm
-- [x] finish ambient config
-- [ ] private functions
+- [x] Create algorithm
+- [x] Finish ambient config
+- [x] Create actions in repository
 
 [Back To The Top](#title)
 
@@ -138,7 +138,7 @@ console.log(password);
 
 <h2 id="license">🔏 License</h2>
 
-Copyright © 2020 [Password Generator ORG <passgenerator.org@gmail.com>](https://github.com/password-generator)
+Copyright © 2020 [Mikael Rolim de Aquino <mikarg9@gmail.com>](https://github.com/password-generator)
 
 This project is licensed by [MIT License](https://api.github.com/licenses/mit).
 
@@ -146,4 +146,4 @@ This project is licensed by [MIT License](https://api.github.com/licenses/mit).
 
 ---
 
-_This README was generated with 💟 by [Readme-Template-Generator](https://github.com/Mikael-R/Readme-Template-Generator)_
+_This README was generated with 💟 by [readme-template-generator](https://github.com/Mikael-R/readme-template-generator)_
