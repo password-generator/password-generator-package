@@ -25,7 +25,9 @@
   "scripts": {
     "commit": "git-cz",
     "format": "eslint src --ext ts",
-    "dist": "babel src --extensions \".ts\" --out-dir dist --copy-files --no-comments && tsc --emitDeclarationOnly"
+    "dist": "babel src --extensions \".ts\" --out-dir dist --copy-files --no-comments && tsc --emitDeclarationOnly",
+    "dev:ts": "[ ! -d \"./dist\" ] && yarn dist; ts-node dev/index.ts",
+    "dev:js": "[ ! -d \"./dist\" ] && yarn dist; node dev/index.js"
   },
   "files": [
     "tsconfig.json",
