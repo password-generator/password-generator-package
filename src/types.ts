@@ -6,26 +6,15 @@ interface Cases {
 }
 
 interface Preferences {
-  passwordLength: number
+  length: number
   initialText?: string
   cases: Cases
 }
 
-export interface Result {
-  success: boolean
-  errorMessage?: string
-  password: string
-}
-
-export interface ErrorToGenerate {
-  exists: boolean
-  message?: string
-}
-
 export interface CheckErros {
-  (preferences: Preferences): ErrorToGenerate
+  (preferences: Preferences): void
 }
 
 export interface GeneratePassword {
-  (preferences: Preferences): Result
+  (preferences: Preferences): string
 }

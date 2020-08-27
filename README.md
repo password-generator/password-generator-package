@@ -48,7 +48,7 @@ Import and execute
 import generatePassword from 'password-generator-package';
 
 const password = generatePassword({
-  passwordLength: 16,
+  length: 16,
   initialText: 'blabla'
   cases: {
     uppercase: true,
