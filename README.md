@@ -1,6 +1,6 @@
 [![Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/password-generator/password-generator-package)
 
-[![NPM Version](https://img.shields.io/npm/v/@password-generator/password-generator-package.svg?style=flat-square)](https://www.npmjs.com/package/@password-generator/password-generator-package) [![NPM Monthly Downloads](https://img.shields.io/npm/dm/@password-generator/password-generator-package.svg?style=flat-square)](https://npmjs.org/package/@password-generator/password-generator-package)
+[![NPM Version](https://img.shields.io/npm/v/password-generator-package.svg?style=flat-square)](https://www.npmjs.com/package/password-generator-package) [![NPM Monthly Downloads](https://img.shields.io/npm/dm/password-generator-package.svg?style=flat-square)](https://npmjs.org/package/password-generator-package)
 
 [![License](https://img.shields.io/github/license/password-generator/password-generator-package?style=flat-square)](LICENSE.md) [![Last Commit](https://img.shields.io/github/last-commit/password-generator/password-generator-package?style=flat-square)](https://github.com/password-generator/password-generator-package/commits/) ![Language Most Used](https://img.shields.io/github/languages/top/password-generator/password-generator-package?style=flat-square) [![Implementations](https://img.shields.io/badge/%F0%9F%92%A1-implementations-8C8E93.svg?style=flat-square)](https://github.com/password-generator/password-generator-package/issues) ![Repository Size](https://img.shields.io/github/repo-size/password-generator/password-generator-package?style=flat-square)
 
@@ -40,23 +40,25 @@ This package contains the password generation algorithm, it was created for code
 
 Install package with you package-manager
 ```sh
-yarn add https://github.com/password-generator/password-generator-package
+yarn add password-generator-package
 ```
 
 Import and execute
 ```typescript
-import generatePassword from 'password-generator-package';
+import { generatePassword } from 'password-generator-package';
 
-const password = generatePassword({
+const preferences = {
   length: 16,
-  initialText: 'blabla'
+  initialText: 'optional'
   cases: {
     uppercase: true,
     lowercase: true,
     numbers: true,
     symbols: true
   }
-});
+}
+
+const password = generatePassword(preferences);
 
 console.log(password);
 ```
@@ -128,9 +130,9 @@ console.log(password);
 
 <h2 id="author">👤 Author</h2>
 
-🤓 **Password Generator ORG <passgenerator.org@gmail.com>**
+🤓 **Mikael Rolim de Aquino <mikarg9@gmail.com>**
 
-- Github: [@password-generator](https://github.com/password-generator)
+- Github: [@Mikael-R](https://github.com/Mikael-R)
 
 [Back To The Top](#title)
 
