@@ -9,7 +9,6 @@
     "outDir": "./dist",
     "rootDir": "./src",
     "declaration": true,
-    "declarationDir": "./dist/types",
     "removeComments": true,
     "typeRoots": [
       "./node_modules/@types",
