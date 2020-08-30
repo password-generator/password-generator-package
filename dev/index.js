@@ -1,4 +1,4 @@
-const { generatePassword } = require('../dist');
+const PasswordGenerator = require('../dist');
 
 const preferences = {
   length: 16,
@@ -11,6 +11,6 @@ const preferences = {
   },
 };
 
-const password = generatePassword(preferences);
+const password = PasswordGenerator.generatePassword(preferences);
 
 console.log(password);

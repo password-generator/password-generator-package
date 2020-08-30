@@ -1,6 +1,6 @@
-import { generatePassword } from '../dist';
+import PasswordGenerator from '../dist';
 
-const preferences = {
+const preferences: PasswordGenerator.Preferences = {
   length: 16,
   initialText: 'blabla',
   cases: {
@@ -11,6 +11,6 @@ const preferences = {
   },
 };
 
-const password = generatePassword(preferences);
+const password = PasswordGenerator.generatePassword(preferences);
 
 console.log(password);

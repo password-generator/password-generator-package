@@ -1,11 +1,11 @@
-interface Cases {
+export interface Cases {
   uppercase: boolean
   lowercase: boolean
   numbers: boolean
   symbols: boolean
 }
 
-interface Preferences {
+export interface Preferences {
   length: number
   initialText?: string
   cases: Cases

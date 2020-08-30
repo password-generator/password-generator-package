@@ -1,6 +1,14 @@
 import { CheckErros } from './types';
 
 const checkErrors: CheckErros = ({ length, initialText = '', cases }) => {
+  if (length === undefined) {
+    throw new Error('Password length not informed');
+  }
+
+  if (cases === undefined) {
+    throw new Error('Cases checks not informed');
+  }
+
   if (Number.isNaN(Number(length))) {
     throw new Error('Password length not is number');
   }

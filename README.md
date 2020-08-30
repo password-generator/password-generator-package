@@ -45,20 +45,20 @@ yarn add password-generator-package
 
 Import and execute
 ```typescript
-import { generatePassword } from 'password-generator-package';
+import PasswordGenerator from '../dist';
 
-const preferences = {
+const preferences: PasswordGenerator.Preferences = {
   length: 16,
-  initialText: 'optional'
+  initialText: 'blabla',
   cases: {
     uppercase: true,
     lowercase: true,
     numbers: true,
-    symbols: true
-  }
-}
+    symbols: true,
+  },
+};
 
-const password = generatePassword(preferences);
+const password = PasswordGenerator.generatePassword(preferences);
 
 console.log(password);
 ```

@@ -1,5 +1,5 @@
 import checkErros from './checkErros';
-import generateRandomCharacter from './tools';
+import generateRandomCharacter from './generateRandomCharacter';
 import { GeneratePassword } from './types';
 
 const generatePassword: GeneratePassword = ({ length, initialText = '', cases }) => {
