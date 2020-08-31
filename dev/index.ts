@@ -1,9 +1,10 @@
-import PasswordGenerator from '../dist';
+import { generatePassword, Preferences } from '../dist';
 
-const preferences: PasswordGenerator.Preferences = {
-  length: 16,
-  initialText: 'blabla',
+const preferences: Preferences = {
+  length: 9,
+  initialText: 'abc',
   cases: {
+    pronounceable: false,
     uppercase: true,
     lowercase: true,
     numbers: true,
@@ -11,6 +12,9 @@ const preferences: PasswordGenerator.Preferences = {
   },
 };
 
-const password = PasswordGenerator.generatePassword(preferences);
-
-console.log(password);
+try {
+  const password = generatePassword(preferences);
+  console.log(password);
+} catch (error) {
+  console.error(error.message);
+}
