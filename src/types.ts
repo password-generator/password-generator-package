@@ -1,20 +1,13 @@
-export interface Cases {
+export type Cases = {
+  pronounceable?: false
   uppercase: boolean
   lowercase: boolean
   numbers: boolean
   symbols: boolean
-}
+} | { pronounceable: true}
 
 export interface Preferences {
   length: number
   initialText?: string
   cases: Cases
-}
-
-export interface CheckErros {
-  (preferences: Preferences): void
-}
-
-export interface GeneratePassword {
-  (preferences: Preferences): string
 }

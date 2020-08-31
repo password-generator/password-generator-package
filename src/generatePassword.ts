@@ -1,6 +1,11 @@
 import checkErros from './checkErros';
-import generateRandomCharacter from './generateRandomCharacter';
-import { GeneratePassword } from './types';
+import generateCharacter from './generateCharacter';
+import generatePronounceableString from './generatePronounceableString';
+import { Preferences } from './types';
+
+interface GeneratePassword {
+  (preferences: Preferences): string
+}
 
 const generatePassword: GeneratePassword = ({ length, initialText = '', cases }) => {
   let password = '';
@@ -9,12 +14,17 @@ const generatePassword: GeneratePassword = ({ length, initialText = '', cases })
 
   const checks: [string, boolean][] = Object.entries(cases);
 
+  if (cases.pronounceable) {
+    password = `${initialText}${generatePronounceableString(length)}`;
+    return password;
+  }
+
   for (let c = 0, i = 0; c < length - initialText.length; c += 1) {
     const target = checks[i][0];
     const value = checks[i][1];
 
     if (value === true) {
-      password += generateRandomCharacter[target]();
+      password += generateCharacter[target]();
     } else {
       c -= 1;
     }

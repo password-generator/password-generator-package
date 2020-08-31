@@ -1,9 +1,10 @@
 const PasswordGenerator = require('../dist');
 
 const preferences = {
-  length: 16,
-  initialText: 'blabla',
+  length: 9,
+  initialText: 'abc',
   cases: {
+    pronounceable: false,
     uppercase: true,
     lowercase: true,
     numbers: true,
@@ -11,6 +12,9 @@ const preferences = {
   },
 };
 
-const password = PasswordGenerator.generatePassword(preferences);
-
-console.log(password);
+try {
+  const password = PasswordGenerator.generatePassword(preferences);
+  console.log(password);
+} catch (error) {
+  console.error(error.message);
+}

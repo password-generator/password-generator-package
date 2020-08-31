@@ -10,7 +10,7 @@
     "sourceType": "module"
   },
   "plugins": ["@typescript-eslint", "eslint-plugin-import-helpers"],
-  "ignorePatterns": "**/dist/*",
+  "ignorePatterns": ["**/dist/*", "**/dev/*"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx"],
