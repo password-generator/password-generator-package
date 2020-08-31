@@ -2,7 +2,7 @@ name: NPM-Publish
 
 on:
   push:
-    branches: [ master ]
+    branches: [master]
 
 jobs:
   publish:
@@ -22,6 +22,8 @@ jobs:
       - name: Build dist files
         run: yarn dist
 
-      - uses: JS-DevTools/npm-publish@v1
+      - name: Publish to NPM
+        if: $GITHUB_REPOSITORY == 'password-generator/password-generator-package'
+        uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_AUTH_TOKEN }}
