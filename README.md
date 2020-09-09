@@ -45,7 +45,7 @@ yarn add password-generator-package
 
 Import and execute
 ```typescript
-import { generatePassword, Preferences } from '../dist';
+import { generatePassword, Preferences } from 'password-generator-package'
 
 const preferences: Preferences = {
   length: 9,
@@ -57,13 +57,13 @@ const preferences: Preferences = {
     numbers: true,
     symbols: true,
   },
-};
+}
 
 try {
   const password = generatePassword(preferences);
   console.log(password);
 } catch (error) {
-  console.error(error.message);
+  console.error(error.message)
 }
 ```
 

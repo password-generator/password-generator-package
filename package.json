@@ -1,6 +1,6 @@
 {
   "name": "password-generator-package",
-  "version": "1.3.4",
+  "version": "1.3.5",
   "description": "Package with the algorithm to generate password",
   "main": "dist/index.js",
   "types": "dist/index.js",
