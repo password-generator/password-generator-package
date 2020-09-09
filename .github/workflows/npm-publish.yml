@@ -20,10 +20,9 @@ jobs:
         run: yarn install
 
       - name: Build dist files
-        run: yarn dist
+        run: yarn compile-dist
 
       - name: Publish to NPM
-        if: $GITHUB_REPOSITORY == 'password-generator/password-generator-package'
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_AUTH_TOKEN }}

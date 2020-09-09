@@ -1,6 +1,6 @@
 {
   "name": "password-generator-package",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "Package with the algorithm to generate password",
   "main": "dist/index.js",
   "types": "dist/index.js",
@@ -26,9 +26,8 @@
     "commit": "git-cz",
     "format": "eslint src --ext ts",
     "remove-old-dist": "[ -d \"./dist\" ] && rm -rf dist",
-    "compile-dist": "sucrase src -d dist --transforms typescript,imports",
-    "generate-types-dist": "tsc --emitDeclarationOnly",
-    "dist": "npm run remove-old-dist && npm run compile-dist && npm run generate-types-dist",
+    "compile-dist": "sucrase src -d dist --transforms typescript,imports && tsc --emitDeclarationOnly",
+    "dist": "npm run remove-old-dist && npm run compile-dist",
     "dev:ts": "ts-node dev/index.ts",
     "dev:js": "node dev/index.js"
   },
@@ -38,7 +37,9 @@
     "LICENSE",
     "README.md"
   ],
-  "dependencies": {},
+  "dependencies": {
+    "password-generator-package": "^1.3.3"
+  },
   "devDependencies": {
     "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^9.1.2",
