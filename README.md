@@ -1,6 +1,6 @@
 [![Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/password-generator/password-generator-package)
 
-[![NPM Version](https://img.shields.io/npm/v/password-generator-package.svg?style=flat-square)](https://www.npmjs.com/package/password-generator-package) [![NPM Monthly Downloads](https://img.shields.io/npm/dm/password-generator-package.svg?style=flat-square)](https://npmjs.org/package/password-generator-package)
+[![NPM Version](https://img.shields.io/npm/v/@password-generator/package.svg?style=flat-square)](https://www.npmjs.com/package/@password-generator/package) [![NPM Monthly Downloads](https://img.shields.io/npm/dm/@password-generator/package.svg?style=flat-square)](https://npmjs.org/package/@password-generator/package)
 
 [![License](https://img.shields.io/github/license/password-generator/password-generator-package?style=flat-square)](LICENSE.md) [![Last Commit](https://img.shields.io/github/last-commit/password-generator/password-generator-package?style=flat-square)](https://github.com/password-generator/password-generator-package/commits/) ![Language Most Used](https://img.shields.io/github/languages/top/password-generator/password-generator-package?style=flat-square) [![Implementations](https://img.shields.io/badge/%F0%9F%92%A1-implementations-8C8E93.svg?style=flat-square)](https://github.com/password-generator/password-generator-package/issues) ![Repository Size](https://img.shields.io/github/repo-size/password-generator/password-generator-package?style=flat-square)
 
@@ -8,7 +8,7 @@
 
 <h1 id="title" align="center">Welcome to password-generator-package 👋</h1>
 
-<h4 align="center"> 🚧 password-generator-package in production... 🚧</h4>
+<h4 align="center">🚧 password-generator-package in production... 🚧</h4>
 
 > Package with the algorithm to generate passwords
 
@@ -40,12 +40,12 @@ This package contains the password generation algorithm, it was created for code
 
 Install package with you package-manager
 ```sh
-yarn add password-generator-package
+yarn add @password-generator/package
 ```
 
 Import and execute
 ```typescript
-import { generatePassword, Preferences } from 'password-generator-package'
+import { generatePassword, Preferences } from '@password-generator/package'
 
 const preferences: Preferences = {
   length: 9,
