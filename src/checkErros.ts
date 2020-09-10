@@ -1,7 +1,7 @@
 import { Preferences } from './types';
 
 interface CheckErros {
-  (preferences: Preferences): void
+  (preferences: Preferences): void;
 }
 
 const checkErrors: CheckErros = ({ length, initialText = '', useChars }) => {
@@ -22,7 +22,9 @@ const checkErrors: CheckErros = ({ length, initialText = '', useChars }) => {
   }
 
   if (initialText?.length >= length) {
-    throw new Error('Initial text cannot be greater than or equal to password length');
+    throw new Error(
+      'Initial text cannot be greater than or equal to password length'
+    );
   }
 
   if (useChars === undefined) {
@@ -33,14 +35,18 @@ const checkErrors: CheckErros = ({ length, initialText = '', useChars }) => {
     throw new Error('Characters not is object');
   }
 
-  const usedChars: [string, boolean][] = Object.entries(useChars)
-    .filter((value) => value[1]);
+  const usedChars: [string, boolean][] = Object.entries(useChars).filter(
+    value => value[1]
+  );
 
   if (!usedChars.length) {
     throw new Error('Characters not has been selected');
   }
 
-  if (usedChars.length > 1 && usedChars.indexOf(['pronounceable', true]) !== -1) {
+  if (
+    usedChars.length > 1 &&
+    usedChars.indexOf(['pronounceable', true]) !== -1
+  ) {
     throw new Error('Pronounceable its checked with others chars');
   }
 };
