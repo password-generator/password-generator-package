@@ -4,7 +4,7 @@ interface CheckErros {
   (preferences: Preferences): void
 }
 
-const checkErrors: CheckErros = ({ length, initialText = '', cases }) => {
+const checkErrors: CheckErros = ({ length, initialText = '', useChars }) => {
   if (length === undefined) {
     throw new Error('Password length not informed');
   }
@@ -25,23 +25,23 @@ const checkErrors: CheckErros = ({ length, initialText = '', cases }) => {
     throw new Error('Initial text cannot be greater than or equal to password length');
   }
 
-  if (cases === undefined) {
-    throw new Error('Cases checks not informed');
+  if (useChars === undefined) {
+    throw new Error('Characters not informed');
   }
 
-  if (typeof cases !== 'object') {
-    throw new Error('Cases not is object');
+  if (typeof useChars !== 'object') {
+    throw new Error('Characters not is object');
   }
 
-  const usedCases: [string, boolean][] = Object.entries(cases)
+  const usedChars: [string, boolean][] = Object.entries(useChars)
     .filter((value) => value[1]);
 
-  if (!usedCases.length) {
-    throw new Error('No cases checks has been selected');
+  if (!usedChars.length) {
+    throw new Error('Characters not has been selected');
   }
 
-  if (usedCases.length > 1 && usedCases.indexOf(['pronounceable', true]) !== -1) {
-    throw new Error('Pronounceable its checked with others cases');
+  if (usedChars.length > 1 && usedChars.indexOf(['pronounceable', true]) !== -1) {
+    throw new Error('Pronounceable its checked with others chars');
   }
 };
 

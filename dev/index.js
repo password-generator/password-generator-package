@@ -3,7 +3,7 @@ const PasswordGenerator = require('../dist');
 const preferences = {
   length: 9,
   initialText: 'abc',
-  cases: {
+  useChars: {
     pronounceable: false,
     uppercase: true,
     lowercase: true,

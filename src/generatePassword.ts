@@ -3,18 +3,18 @@ import generateCharacter from './generateCharacter';
 import generatePronounceableString from './generatePronounceableString';
 import { Preferences } from './types';
 
-interface GeneratePassword {
-  (preferences: Preferences): string
-}
-
-const generatePassword: GeneratePassword = ({ length, initialText = '', cases }) => {
+const generatePassword = ({
+  length,
+  initialText = '',
+  useChars,
+}: Preferences): string => {
   let password = '';
 
-  checkErros({ length, initialText, cases });
+  checkErros({ length, initialText, useChars });
 
-  const checks: [string, boolean][] = Object.entries(cases);
+  const checks: [string, boolean][] = Object.entries(useChars);
 
-  if (cases.pronounceable) {
+  if (useChars.pronounceable) {
     password = `${initialText}${generatePronounceableString(length)}`;
     return password;
   }

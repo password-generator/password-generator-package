@@ -2,8 +2,8 @@ import { generatePassword, Preferences } from '../dist';
 
 const preferences: Preferences = {
   length: 9,
-  initialText: 'abc',
-  cases: {
+  initialText: '',
+  useChars: {
     pronounceable: false,
     uppercase: true,
     lowercase: true,

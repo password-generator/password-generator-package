@@ -1,19 +1,17 @@
-const randInt = (max: number, min: number) => Math.floor(Math.random() * min) + max;
-
-const generateRandomCharacter = {
+const generateCharacter = {
   uppercase() {
-    return String.fromCharCode(randInt(26, 65));
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
   },
   lowercase() {
-    return String.fromCharCode(randInt(26, 97));
+    return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
   },
   numbers() {
-    return String.fromCharCode(randInt(10, 48));
+    return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
   },
   symbols() {
-    const symbols = '!@#$%^&*(){}[]=<>/,.';
-    return symbols[randInt(0, symbols.length)];
+    const symbolsString = '!@#$%^&*(){}[]=<>/,.';
+    return symbolsString[Math.floor(Math.random() * symbolsString.length)];
   },
 };
 
-export default generateRandomCharacter;
+export default generateCharacter;
