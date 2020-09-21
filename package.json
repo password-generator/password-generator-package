@@ -1,26 +1,9 @@
 {
   "name": "@password-generator/package",
-  "version": "2.1.1",
+  "version": "2.1.2",
   "description": "Package with the algorithm to generate password",
   "main": "dist/index.js",
   "types": "dist/index.js",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/password-generator/password-generator-package.git"
-  },
-  "homepage": "https://github.com/password-generator/password-generator-package#readme",
-  "bugs": {
-    "url": "https://github.com/password-generator/password-generator-package/issues"
-  },
-  "keywords": [
-    "password",
-    "package",
-    "generate",
-    "generate-password",
-    "password-generator"
-  ],
-  "author": "Mikael Rolim de Aquino <mikarg9@gmail.com>",
-  "license": "MIT",
   "private": false,
   "scripts": {
     "commit": "git-cz",
@@ -31,17 +14,29 @@
     "dev:ts": "ts-node dev/index.ts",
     "dev:js": "node dev/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/password-generator/password-generator-package.git"
+  },
+  "keywords": [
+    "password",
+    "package",
+    "generate",
+    "generate-password",
+    "password-generator"
+  ],
+  "author": "Mikael Rolim de Aquino <mikarg9@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/password-generator/password-generator-package/issues"
+  },
+  "homepage": "https://github.com/password-generator/password-generator-package#readme",
   "files": [
     "tsconfig.json",
     "dist",
     "LICENSE",
     "README.md"
   ],
-  "dependencies": {
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "prettier": "^2.1.1"
-  },
   "devDependencies": {
     "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^9.1.2",
@@ -52,14 +47,17 @@
     "cz-conventional-changelog": "^3.2.0",
     "eslint": "^7.5.0",
     "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
     "eslint-import-resolver-typescript": "^2.2.1",
     "eslint-plugin-import": "^2.22.0",
     "eslint-plugin-import-helpers": "^1.1.0",
     "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-promise": "^4.2.1",
     "git-cz": "^4.7.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
+    "prettier": "^2.1.2",
     "rimraf": "^3.0.2",
     "ts-node": "^8.4.1",
     "typescript": "^3.6.3"
