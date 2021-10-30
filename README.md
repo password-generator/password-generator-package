@@ -83,6 +83,7 @@ try {
 <h2 id="minimal-requirements">🌱 Minimal Requirements</h2>
 
 - NodeJs
+- Npm or Yarn
 
 [Back To The Top](#title)
 
